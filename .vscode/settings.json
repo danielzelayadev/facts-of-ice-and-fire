@@ -1,6 +1,7 @@
 {
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "javascript.validate.enable": false,
-  "prettier.eslintIntegration": true
+  "prettier.eslintIntegration": true,
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "eslint.enable": true
 }

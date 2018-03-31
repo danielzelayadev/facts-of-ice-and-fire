@@ -5,7 +5,7 @@
     "prettier",
     "prettier/react"
   ],
-  "plugins": ["flowtype", "prettier"],
+  "plugins": ["flowtype", "prettier", "import"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2016,
@@ -22,5 +22,12 @@
   },
   "rules": {
     "react/jsx-filename-extension": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./webpack.config.js"
+      }
+    }
   }
 }

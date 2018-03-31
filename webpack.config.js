@@ -6,7 +6,7 @@ const webpack = require('webpack');
 const dist = 'build';
 
 const config = {
-  entry: ['react-hot-loader/patch', './src/index.js'],
+  entry: ['react-hot-loader/patch', 'babel-polyfill', './src/index.js'],
   output: {
     path: path.resolve(__dirname, dist),
     filename: 'bundle.js',
@@ -19,6 +19,13 @@ const config = {
     hot: true,
     open: true,
     watchContentBase: true
+  },
+  resolve: {
+    alias: {
+      components: path.resolve(__dirname, 'src/components'),
+      selectors: path.resolve(__dirname, 'src/selectors'),
+      store: path.resolve(__dirname, 'src/store')
+    }
   },
   module: {
     rules: [
