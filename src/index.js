@@ -2,9 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import configureStore from './store';
-import App from './components/App';
+import configureStore from 'store';
+import App from 'containers/App';
 
 const store = configureStore();
 
@@ -15,9 +14,7 @@ const renderApp = () => {
     render(
       <AppContainer>
         <Provider store={store}>
-          <MuiThemeProvider>
-            <App />
-          </MuiThemeProvider>
+          <App />
         </Provider>
       </AppContainer>,
       renderTarget
@@ -25,4 +22,4 @@ const renderApp = () => {
 };
 renderApp();
 
-if (module.hot) module.hot.accept('./components/App', () => renderApp());
+if (module.hot) module.hot.accept('./containers/App', () => renderApp());

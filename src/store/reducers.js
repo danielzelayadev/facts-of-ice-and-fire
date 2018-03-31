@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux-immutable';
 
-import auth from './auth';
+import root from './root';
 
 export default function createReducer() {
   return combineReducers({
-    auth
+    root
   });
 }

@@ -23,6 +23,8 @@ const config = {
   resolve: {
     alias: {
       components: path.resolve(__dirname, 'src/components'),
+      containers: path.resolve(__dirname, 'src/containers'),
+      constants: path.resolve(__dirname, 'src/constants.js'),
       selectors: path.resolve(__dirname, 'src/selectors'),
       store: path.resolve(__dirname, 'src/store')
     }
